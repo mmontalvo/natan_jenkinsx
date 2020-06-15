@@ -37,7 +37,7 @@ Now we need to start an interactive shell, login as `postgres` user in our datab
 
 ```bash
 # getting into our container
-docker exec -it _container_id_ bash
+docker exec -it _postgres-container-id_ bash
 
 # login into our database
 psql -U postgres
