@@ -30,22 +30,22 @@ For it, we need to get into the database Docker running instance.
 Running `docker ps` we can spot the instance running our database (it would be something similar to the following line):
 
 ```bash
-_container_id_   postgres:9.6.15  "docker-entrypoint.s…"   2 days ago          Up 11 seconds       0.0.0.0:32777->5432/tcp   postgresql_1
+_postgres-container-id_   postgres:9.6.15  "docker-entrypoint.s…"   2 days ago          Up 11 seconds       0.0.0.0:32777->5432/tcp   postgresql_1
 ```
 
 Now we need to start an interactive shell, login as `postgres` user in our database and create our database with the following commands:
 
 ```bash
-(getting into our container)
+# getting into our container
 docker exec -it _container_id_ bash
 
-(login into our database)
+# login into our database
 psql -U postgres
 
-(creating our database)
+# creating our database
 CREATE DATABASE moneyfx;
 
-(exit postgres interactive shell)
+# exit postgres interactive shell
 \q
 ```
 
