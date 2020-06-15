@@ -1,10 +1,10 @@
 FROM python:3
 ENV PYTHONUNBUFFERED 1
-RUN mkdir /rest_django_trading
-WORKDIR /rest_django_trading
-COPY requirements.txt /rest_django_trading/
+RUN mkdir -p /manning/rest_django_trading
+WORKDIR /manning/rest_django_trading
+COPY requirements.txt /manning/rest_django_trading/
 RUN pip install -r requirements.txt
-ADD . /rest_django_trading/
+ADD . /manning/rest_django_trading/
 
 EXPOSE 8100
 
