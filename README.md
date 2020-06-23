@@ -36,16 +36,16 @@ _postgres-container-id_   postgres:9.6.15  "docker-entrypoint.s…"   2 days ago
 Now we need to start an interactive shell, login as `postgres` user in our database and create our database with the following commands:
 
 ```bash
-# getting into our container
+# Access the container where we have our database running with:
 docker exec -it _postgres-container-id_ bash
 
-# login into our database
+# then login into our database with the default postgreSQL user:
 psql -U postgres
 
-# creating our database
+# Within postgreSQL, we just need to create our database with the following command:
 CREATE DATABASE moneyfx;
 
-# exit postgres interactive shell
+# and lastly, exit postgres interactive shell:
 \q
 ```
 
