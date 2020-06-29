@@ -59,8 +59,6 @@ _trading_id_        trading             "gunicorn --chdir re…"   2 days ago   
 
 docker exec -it _trading_id_ bash
 
-cd rest_django_trading
-
 python manage.py migrate
 ```
 
