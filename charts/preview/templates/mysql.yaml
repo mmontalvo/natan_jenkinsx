@@ -1,0 +1,10 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: mysql
+spec:
+  type: ExternalName
+  # Target service DNS name
+  externalName: mysql.jx-staging.svc.cluster.local
+  ports:
+  - port: 3306

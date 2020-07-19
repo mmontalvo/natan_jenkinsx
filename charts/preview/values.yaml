@@ -18,3 +18,13 @@ preview:
     repository: null
     tag: null
   namespace: jx-previews
+
+  mysql:
+    fullnameOverride: mysql
+    persistence:
+      enabled: true
+      accessMode: ReadWriteOnce
+      size: 1Gi
+      annotations: {}
+    mysqlRootPassword: password
+    mysqlDatabase: moneyfx

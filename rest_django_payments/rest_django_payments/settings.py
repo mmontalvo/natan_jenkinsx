@@ -77,12 +77,12 @@ WSGI_APPLICATION = 'rest_django_payments.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'moneyfx',
-        'USER': 'postgres',
-	'PASSWORD': os.environ.get('POSTGRES_PASSWORD', 'admiN1&FX'),
-        'HOST': os.environ.get('MONEYFX_PG_HOST', 'postgresql'),
-        'PORT': 5432,
+        'USER': 'root',
+	    'PASSWORD': os.environ.get('POSTGRES_PASSWORD', 'password'),
+        'HOST': os.environ.get('MONEYFX_PG_HOST', 'mysql'),
+        'PORT': 3306,
     }
 }
 

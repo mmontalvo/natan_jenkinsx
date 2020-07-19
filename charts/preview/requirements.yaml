@@ -8,9 +8,16 @@ dependencies:
   name: exposecontroller
   repository: http://chartmuseum.jenkins-x.io
   version: 2.3.92
+- name: mysql
+  repository: https://kubernetes-charts.storage.googleapis.com/
+  version: ~0.12.0
+
+- name: payments
+  repository: file://../rest_django_payments
+  version: PREVIEW_VERSION
 
   # !! "alias: preview" must be last entry in dependencies array !!
   # !! Place custom dependencies above !!
 - alias: preview
-  name: natan-jenkinsx
-  repository: file://../natan-jenkinsx
+  name: trading
+  repository: file://../rest_django_trading
